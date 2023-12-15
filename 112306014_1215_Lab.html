@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>112306014_1215_Lab</title>
+	<style>
+       body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    input {
+        margin: 5px;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+</style>
+</head>
+<body>
+
+	<script >
+
+            // Prompt the user for the first and second inputs
+		var firstInput = prompt('Enter the first input:');
+		var secondInput = prompt('Enter the second input:');
+
+            // Check if both inputs are valid numbers
+		if (!isNaN(firstInput) && !isNaN(secondInput)) {
+                // Convert the inputs to numbers
+			var num1 = parseFloat(firstInput);
+			var num2 = parseFloat(secondInput);
+
+                // Compare the inputs
+			if (num1 > num2) {
+				document.body.style.backgroundColor = 'lightblue';
+				document.write(num1 + ">" + num2 +"<p>");
+			} else if (num2 > num1) {
+				document.body.style.backgroundColor = 'orange';
+				document.write(num2 + ">" + num1 +"<p>");
+			} else {
+				document.body.style.backgroundColor = 'lightyellow';
+				document.write(num1 + " == " + num2 +"<p>");
+			}
+		} else {
+                // Display an error message if input is not a valid number
+			alert('Invalid input. Please enter valid numbers.');
+		}
+
+
+		function showFirstInput() {
+			alert('First input: ' + firstInput);
+		}
+
+		function showSecondInput() {
+			alert('Second input: ' + secondInput);
+		}
+
+	</script>
+
+	<button type="button" onclick="showFirstInput()">Show First Input</button>
+	<button type="button" onclick="showSecondInput()">Show Second Input</button>
+
+</body>
+</html>
